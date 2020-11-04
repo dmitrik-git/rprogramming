@@ -1,3 +1,6 @@
+##Useful resource
+# https://github.com/lgreski/datasciencectacontent/blob/master/markdown/rprog-extractOperator.md
+
 data <-read.csv("hw1_data.csv")
 theCols<- c("Ozone","Temp","Solar.R")
 #data[,theCols]
