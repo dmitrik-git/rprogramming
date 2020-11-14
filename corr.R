@@ -19,31 +19,16 @@ corr <- function(directory, threshold = 0) {
 
 cr <- corr("specdata", 150)
 head(cr)
+summary(cr)
 
-all.obs <- complete ("specdata")
-obs.over.threshold <- 
-  aa <- all.obs ["nobs"] > 0
-  all.obs[aa, "id"] 
-files <- list.files(full.names = FALSE)
-filedata <- read.csv(files[2])
-sulfate <- filedata ["sulfate"]
-nitrate <- filedata ["nitrate"]
-sulfate
-nitrate
-cor(sulfate, nitrate, use = "complete.obs")
+cr <- corr("specdata", 400)
+head(cr)
+summary(cr)
 
-dir <- identical (getwd(), "~/rprogramming")
-dir
-setwd("C:/Users/dmitri.kovagin/Documents/RStudio/rprogramming/specdata")
-Sys.getenv("R_USER")
-a <- complete ("specdata")
-b <- a ["nobs"] > 1000
-b
-a[a ["nobs"] > 1000] 
-a[154,]
-?cor
+cr <- corr("specdata", 5000)
+summary(cr)
+length(cr)
 
-vv <- numeric (3)
-vv[1]<- 3
-vv[3] <- 6
-vv
+cr <- corr("specdata")
+summary(cr)
+length(cr)
