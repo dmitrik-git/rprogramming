@@ -1,6 +1,6 @@
 best <- function(state, outcome) {
   ## Read outcome data
-  data <- read.csv("outcome-of-care-measures.csv", colClasses = "character")
+  data <- read.csv("outcome-of-care-measures.csv", colClasses = "character", na.strings="Not Available", stringsAsFactors = FALSE)
   
   ## Check that state and outcome are valid
   valid.states <- unique(data[,7])
